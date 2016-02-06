@@ -6,6 +6,7 @@ This document contains information for Collaborators of the Stellate website pro
 
 To keep the code of Stellate clean and compliant to one and not hundreds of ways of writing code we follow several guidelines and code standards:
 * [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide/blob/master/README.md)
+* [JavaScript Standard Style](https://github.com/feross/standard#rules)
 * [Ruby on Rails Style Guide](https://github.com/bbatsov/rails-style-guide/blob/master/README.md)
 * [GitHub Flow](https://guides.github.com/introduction/flow/index.html)
 
@@ -22,7 +23,7 @@ To keep the code of Stellate clean and compliant to one and not hundreds of ways
   * Make sure to reduce an unnecessary high amount of commits by using `git rebase -i`
   * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes, or adjusted them, if you made major changes to an already existing feature.
-* Run _all_ the tests to assure nothing else was accidentally broken.
+* Run _all_ the tests to assure nothing else was accidentally broken. (TODO: remove this since we run tests on PRs automatically?)
 
 ### Commit Conventions
 
