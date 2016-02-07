@@ -242,6 +242,8 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    paranoia (2.1.5)
+      activerecord (~> 4.0)
     pg (0.18.4)
     pg (0.18.4-x86-mingw32)
     rack (1.6.4)
@@ -381,6 +383,7 @@ DEPENDENCIES
   jquery-turbolinks
   nokogiri
   paperclip (~> 4.2)
+  paranoia (~> 2.0)
   pg
   rails (= 4.2.5.1)
   rails_admin

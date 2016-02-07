@@ -60,6 +60,10 @@ gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'sidekiq'
 gem 'sinatra', require: false
 
+# Soft Deletion
+######################################
+gem "paranoia", "~> 2.0"
+
 group :production do
   gem 'unicorn'
 end
