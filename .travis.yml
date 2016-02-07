@@ -4,5 +4,4 @@ rvm: 2.2
 services:
 - redis-server
 before_script:
-- cp config/database.yml config/database.yml
 - bundle exec rake db:drop db:create db:migrate db:test:prepare
