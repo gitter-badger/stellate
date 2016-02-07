@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :profile, foreign_key: 'user_id',
-                      dependent: :destroy
+  has_one :profile, dependent: :destroy
+
+  after_create do
+    Profile.create(user_id: self.id)
+  end
 end
