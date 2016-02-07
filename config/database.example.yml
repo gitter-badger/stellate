@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+production:
+  <<: *default
+  database: stellate_production
+  pool: 25
+  # username: username
+  # password:
+  # host: localhost
+  # port: 5432
+
+development:
+  <<: *default
+  database: stellate_development
+  pool: 5
+
+test:
+  <<: *default
+  database: stellate_test
+  username: postgres
+  password:
