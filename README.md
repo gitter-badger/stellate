@@ -1,6 +1,6 @@
 # stellate
 
-Microblogging like in the old days.
+Making microblogging great again.
 
 # License
 
