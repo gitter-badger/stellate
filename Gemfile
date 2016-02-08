@@ -72,6 +72,8 @@ group :development, :test do
   gem 'byebug'
   gem 'nokogiri'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', require: false
+  gem 'faker'
 end
 
 group :development do
