@@ -35,10 +35,6 @@ gem 'paperclip', '~> 4.2'
 gem 'fog'
 gem 'fog-aws'
 
-# JavaScript Runtime
-######################################
-gem 'therubyracer', platforms: :ruby
-
 # JavaScript/JQuery Libraries
 ######################################
 gem 'jquery-rails'
@@ -60,6 +56,10 @@ gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'sidekiq'
 gem 'sinatra', require: false
 
+# Soft Deletion
+######################################
+gem "paranoia", "~> 2.0"
+
 group :production do
   gem 'unicorn'
 end
@@ -67,6 +67,9 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'nokogiri'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', require: false
+  gem 'faker'
 end
 
 group :development do
