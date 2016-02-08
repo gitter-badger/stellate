@@ -12,6 +12,6 @@
         = render "header/signed_in"
       - else
         %ul.nav.navbar-nav.navbar-right
-          = nav_entry "Sign in", new_user_session_path
-          = nav_entry "Register", new_user_registration_path
+          = nav_entry t('voc.sign_in'), new_user_session_path
+          = nav_entry t('voc.sign_up'), new_user_registration_path
 

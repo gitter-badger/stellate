@@ -60,6 +60,11 @@ gem 'sinatra', require: false
 ######################################
 gem "paranoia", "~> 2.0"
 
+# i18n
+######################################
+gem 'rails-i18n', '~> 4.0.0'
+gem 'devise-i18n', '~> 0.12.1'
+
 group :production do
   gem 'unicorn'
 end
