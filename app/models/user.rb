@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
 
   has_one :profile, dependent: :destroy
 
+  validates :screen_name, presence: true,
+                          uniqueness: { case_sensitive: false }
+
   after_create do
     Profile.create(user_id: self.id)
   end
