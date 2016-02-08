@@ -2,17 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.create(
-      screen_name: Faker::Internet.user_name(nil, %w(_)),
-      password: 'test123',
-      email: Faker::Internet.email
-    )
+    @user = FactoryGirl.create(:user)
 
-    @user2 = User.create(
-      screen_name: 'hotboysontheinternet2009',
-      password: 'test456',
-      email: 'hotboys@internet.xxx'
-    )
+    @user2 = FactoryGirl.create(:user)
   end
 
   subject { @user }
@@ -27,7 +19,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'should refuse to save the same username' do
-    @user.screen_name = 'hotboysontheinternet2009'
+    @user.screen_name = @user2.screen_name
     expect { @user.save! }.to raise_error(ActiveRecord::RecordInvalid)
   end
 end

@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Profile, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before :each do
+    @user = FactoryGirl.create(:user)
+    @profile = FactoryGirl.create(:profile, user: @user)
+  end
+
+  it 'should have the same user id stored' do
+    expect(@profile.user_id).to match @user.id
+  end
 end
