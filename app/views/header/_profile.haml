@@ -1,0 +1,8 @@
+%li.dropdown
+  %a.dropdown-toggle{href: "#", "data-toggle" => "dropdown"}
+    = current_user.screen_name
+    %b.caret
+  %ul.dropdown-menu
+    %li
+      %a{href: destroy_user_session_path, data: {method: :delete} }
+        Logout
