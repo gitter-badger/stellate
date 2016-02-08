@@ -1,18 +1,18 @@
 .container.page-margin
-  %h2 Log in
+  %h2= t('views.session.title')
 
   = bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     = devise_error_messages!
 
     .field
-      = f.email_field :email, autofocus: true, label: "E-Mail address"
-      = f.password_field :password, autocomplete: "off", label: "Password"
+      = f.email_field :email, autofocus: true, label: t('voc.email')
+      = f.password_field :password, autocomplete: "off", label: t('voc.password')
 
     - if devise_mapping.rememberable?
       .field
-        = f.check_box :remember_me
+        = f.check_box :remember_me, label: t('voc.remember_me')
 
     .actions
-      = f.submit "Sign in"
+      = f.submit t('voc.sign_in')
 
   = render "devise/shared/links"

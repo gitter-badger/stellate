@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    registration:
+      title: "Register"
+    session:
+      title: "Login"
+  voc:
+    confirm_password: "Confirm password"
+    email: "E-Mail address"
+    password: "Password"
+    remember_me: "Remember me"
+    screen_name: "Screen name"
+    sign_in: "Login"
+    sign_out: "Logout"
+    sign_up: "Register"
+    
