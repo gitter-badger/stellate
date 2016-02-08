@@ -35,10 +35,6 @@ gem 'paperclip', '~> 4.2'
 gem 'fog'
 gem 'fog-aws'
 
-# JavaScript Runtime
-######################################
-gem 'therubyracer', platforms: :ruby
-
 # JavaScript/JQuery Libraries
 ######################################
 gem 'jquery-rails'

@@ -228,7 +228,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.10.0)
-    libv8 (3.16.14.13)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -307,7 +306,6 @@ GEM
       nokogiri (>= 1.4.1)
       trollop
     redis (3.2.2)
-    ref (2.0.0)
     remotipart (1.2.1)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
@@ -351,9 +349,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    therubyracer (0.12.2)
-      libv8 (~> 3.16.14.0)
-      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
@@ -419,7 +414,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sidekiq
   sinatra
-  therubyracer
   turbolinks
   typescript-rails
   tzinfo-data
