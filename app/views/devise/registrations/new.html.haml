@@ -1,0 +1,20 @@
+.container.page-margin
+  %h2 Sign up
+
+  = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+
+    .field
+      = f.text_field :screen_name, autofocus: true, label: "Screen name"
+      = f.email_field :email, autofocus: true, label: "E-Mail address"
+
+    .field
+      = f.password_field :password, autocomplete: "off", label: "Password"
+
+    .field
+      = f.password_field :password_confirmation, autocomplete: "off", label: "Confirm password"
+
+    .actions
+      = f.submit "Sign up"
+
+  = render "devise/shared/links"
