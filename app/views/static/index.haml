@@ -2,6 +2,6 @@
   -# TEMPORARY, PLS FIX (TODO)
   .jumbotron
     %h1 Stellate
-    %p A microblogging site that doesn't completely suck.
+    %p= t('static.index.description')
     %p
-      %a.btn.btn-primary.btn-lg{href: '/register', role: 'button'} Sign up
+      %a.btn.btn-primary.btn-lg{href: '/register', role: 'button'}= t('static.index.signin')

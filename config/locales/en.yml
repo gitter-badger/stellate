@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  static:
+    index:
+      description: "A microblogging site that doesn't completely suck."
+      signin: "Sign in"
+    about:
+      first: "Stellate is developed by"
+      last: "developers. For more information, visit our website."
