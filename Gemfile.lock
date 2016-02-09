@@ -309,6 +309,7 @@ GEM
       builder
       nokogiri (>= 1.4.1)
       trollop
+    redcarpet (3.3.4)
     redis (3.2.2)
     remotipart (1.2.1)
     responders (2.1.1)
@@ -409,6 +410,7 @@ DEPENDENCIES
   rails (= 4.2.5.1)
   rails-i18n (~> 4.0.0)
   rails_admin
+  redcarpet
   redis
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
