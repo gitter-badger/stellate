@@ -1,20 +1,25 @@
 .container.page-margin
-  %h2= t('views.registration.title')
+  .row
+    .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-10.col-xs-offset-1
+      %h2.text-center.heading= t('views.registration.title')
+      %p.text-center.text-muted.subheading= t('views.registration.subtitle')
+      
+      .panel.panel-default
+        .panel-body
+          = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            = devise_error_messages!
 
-  = bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = devise_error_messages!
+            .field
+              = f.text_field :screen_name, autofocus: true, label: t('voc.screen_name')
+              = f.email_field :email, autofocus: true, label: t('voc.email')
 
-    .field
-      = f.text_field :screen_name, autofocus: true, label: t('voc.screen_name')
-      = f.email_field :email, autofocus: true, label: t('voc.email')
+            .field
+              = f.password_field :password, autocomplete: "off", label: t('voc.password')
 
-    .field
-      = f.password_field :password, autocomplete: "off", label: t('voc.password')
+            .field
+              = f.password_field :password_confirmation, autocomplete: "off", label: t('voc.confirm_password')
 
-    .field
-      = f.password_field :password_confirmation, autocomplete: "off", label: t('voc.confirm_password')
-
-    .actions
-      = f.submit t('voc.sign_up')
+            .actions
+              = f.submit t('voc.sign_up'), class: 'btn btn-block btn-primary'
 
   = render "devise/shared/links"
