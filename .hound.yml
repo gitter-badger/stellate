@@ -1,2 +1,5 @@
 ruby:
-  config_file: .rubocop.yml
+  config_file: config/style/rubocop.yml
+
+haml:
+  config_file: config/style/haml-lint.yml
