@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  # Routes for static pages:
   root 'static#index'
   get 'faq' => 'static#faq'
   get 'about' => 'static#about'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
