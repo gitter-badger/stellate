@@ -20,19 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  static:
-    index:
-      description: "A microblogging site that doesn't completely suck."
-      signin: "Sign in"
-    about:
-      first: "Stellate is developed by"
-      last: "developers. For more information, visit our website."
   views:
     registration:
       title: "Register"
     session:
       title: "Login"
+    about: "Stellate is developed by %{nightbug} developers. For more information, visit our website."
+    index:
+      description: "A microblogging site that doesn't completely suck."
   voc:
     confirm_password: "Confirm password"
     email: "E-Mail address"
