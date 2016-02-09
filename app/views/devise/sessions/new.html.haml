@@ -1,18 +1,23 @@
 .container.page-margin
-  %h2= t('views.session.title')
+  .row
+    .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-10.col-xs-offset-1
+      %h2.text-center.heading= t('views.session.title')
+      %p.text-center.text-muted.subheading= t('views.session.subtitle')
 
-  = bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = devise_error_messages!
+      .panel.panel-default
+        .panel-body
+          = bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            = devise_error_messages!
 
-    .field
-      = f.email_field :email, autofocus: true, label: t('voc.email')
-      = f.password_field :password, autocomplete: "off", label: t('voc.password')
+            .field
+              = f.text_field :login, autofocus: true, label: "#{t('voc.screen_name')}/#{t('voc.email')}"
+              = f.password_field :password, autocomplete: "off", label: t('voc.password')
 
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me, label: t('voc.remember_me')
+            - if devise_mapping.rememberable?
+              .field
+                = f.check_box :remember_me, label: t('voc.remember_me')
 
-    .actions
-      = f.submit t('voc.sign_in')
+            .actions
+              = f.submit t('voc.sign_in'), class: 'btn btn-primary btn-block'
 
   = render "devise/shared/links"
