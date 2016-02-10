@@ -19,5 +19,8 @@
 # Ignore database configuration.
 /config/database.yml
 
+# Ignore coverage generation
+/coverage
+
 # Ignore backup files
 *~
