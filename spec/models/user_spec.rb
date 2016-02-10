@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before :each do
     @user = FactoryGirl.create(:user)
-
     @user2 = FactoryGirl.create(:user)
   end
 
