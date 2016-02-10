@@ -1,0 +1,25 @@
+.alert {
+  &-top {
+    position: absolute;
+    border-radius: 0;
+    top: $navbar-height;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &-noscript {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0.75);
+    text-shadow: 1px 1px 0px #000;
+    padding: 35px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    z-index: 100;
+  }
+}
