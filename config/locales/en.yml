@@ -24,6 +24,7 @@ en:
     registration:
       title: "Register"
       subtitle: "Your journey is about to begin!"
+      new: "New to %{stellate}?"
     session:
       title: "Login"
       subtitle: "Welcome back!"

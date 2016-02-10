@@ -1,0 +1,22 @@
+%li.dropdown.hidden-xs
+  %a.dropdown-toggle{href: new_user_session_path, "data-toggle" => "dropdown"}
+    Have an account? Log in
+    %b.caret
+  %ul.dropdown-menu.login-dropdown
+    %li
+      = bootstrap_form_for(:user, url: session_path(:user)) do |f|
+        %p.text-muted= t('voc.sign_in')
+
+        .field
+          = f.text_field :login, autofocus: true, placeholder: "#{t('voc.screen_name')}/#{t('voc.email')}", hide_label: true
+          = f.password_field :password, autocomplete: "off", placeholder: t('voc.password'), hide_label: true
+
+        .field
+          = f.check_box :remember_me, label: t('voc.remember_me')
+
+        .actions
+          = f.submit t('voc.sign_in'), class: 'btn btn-default btn-block'
+    %li.divider
+    %li
+      %p.text-muted= t('views.registration.new', stellate: "Stellate")
+      %a.btn.btn-primary.btn-block{href: new_user_registration_path}= t('voc.sign_up')
