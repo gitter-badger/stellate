@@ -37,12 +37,12 @@ module ApplicationHelper
     content_tag(:a, body.html_safe, href: path, class: ("list-group-item #{'active ' if current_page? path}#{options[:class]}"))
   end
 
-  def bootstrap_color c
+  def bootstrap_color(c)
     case c
-    when "error", "alert"
-      "danger"
-    when "notice"
-      "info"
+    when 'error', 'alert'
+      'danger'
+    when 'notice'
+      'info'
     else
       c
     end
