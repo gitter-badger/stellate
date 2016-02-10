@@ -39,3 +39,5 @@ en:
     sign_in: "Login"
     sign_out: "Logout"
     sign_up: "Register"
+  alerts:
+    noscript: "Please enable Javascript!"
