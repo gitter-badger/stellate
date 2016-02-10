@@ -12,6 +12,21 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(@item).to include('http://google.com')
       expect(@item).to include('test')
     end
+
+    it 'should return an icon if specified' do
+      @item2 = helper.nav_entry('test', 'http://google.com', {
+        icon: 'nice'
+      })
+      expect(@item2).to include('mdi-nice')
+    end
+
+    it 'should return a badge if specified' do
+      @item2 = helper.nav_entry('test', 'http://google.com', {
+        badge: true,
+        badge_color: 'rainbow'
+      })
+      expect(@item2).to include('badge-rainbow')
+    end
   end
 
   describe '#list_group_item' do
@@ -23,6 +38,14 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(@item).to include('<li')
       expect(@item).to include('http://google.com')
       expect(@item).to include('test')
+    end
+
+    it 'should return a badge if specified' do
+      @item2 = helper.nav_entry('test', 'http://google.com', {
+        badge: true,
+        badge_color: 'rainbow'
+      })
+      expect(@item2).to include('badge-rainbow')
     end
   end
 
