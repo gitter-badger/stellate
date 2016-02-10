@@ -12,6 +12,8 @@
         = render "header/signed_in"
       - else
         %ul.nav.navbar-nav.navbar-right
-          = nav_entry t('voc.sign_in'), new_user_session_path
-          = nav_entry t('voc.sign_up'), new_user_registration_path
-
+          = render "header/login"
+          %li.visible-xs
+            %a{href: new_user_session_path}= t('voc.sign_in')
+          %li.visible-xs
+            %a{href: new_user_registration_path}= t('voc.sign_up')
