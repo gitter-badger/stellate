@@ -31,6 +31,8 @@ en:
     about: "Stellate is developed by %{nightbug} developers. For more information, visit our website."
     index:
       description: "A microblogging site that doesn't completely suck."
+    header:
+      admin: "Admin Panel"
   voc:
     confirm_password: "Confirm password"
     email: "E-Mail address"
