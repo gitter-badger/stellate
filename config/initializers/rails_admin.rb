@@ -1,14 +1,13 @@
 RailsAdmin.config do |config|
-
-  config.main_app_name = ["Stellate", "Administration"]
+  config.main_app_name = %w[Stellate Administration]
 
   config.authorize_with do
     redirect_to main_app.root_path unless current_user.has_role? :admin
   end
 
   config.actions do
-    dashboard                     
-    index                         
+    dashboard
+    index
     new
     export
     bulk_delete
