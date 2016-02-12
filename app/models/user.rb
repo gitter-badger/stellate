@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   acts_as_paranoid
 
   # Include default devise modules. Others available are:

@@ -66,6 +66,10 @@ gem "paranoia", "~> 2.0"
 gem 'rails-i18n', '~> 4.0.0'
 gem 'devise-i18n', '~> 0.12.1'
 
+# User Roles
+######################################
+gem 'rolify', '~> 5.0'
+
 group :production do
   gem 'unicorn'
 end
