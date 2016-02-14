@@ -70,25 +70,28 @@ gem 'devise-i18n', '~> 0.12.1'
 ######################################
 gem 'rolify', '~> 5.0'
 
+# Gems only needed for production
+######################################
 group :production do
   gem 'unicorn'
 end
 
-group :development, :test do
+# Gems only needed for development
+######################################
+group :development do
   gem 'byebug'
   gem 'nokogiri'
-  gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails', require: false
-  gem 'faker'
-end
-
-group :test do
-  gem 'codecov', require: false
-end
-
-group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
+end
+
+# Gems only needed while testing
+######################################
+group :test do
+  gem 'codecov', require: false
+  gem 'factory_girl_rails', require: false
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
