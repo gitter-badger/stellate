@@ -15,4 +15,7 @@ class StaticController < ApplicationController
 
   def terms
   end
+
+  def coc
+  end
 end
