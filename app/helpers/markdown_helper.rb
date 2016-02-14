@@ -22,8 +22,8 @@ module MarkdownHelper
   def from_file(path, relative_to)
     begin
       File.read relative_to.join(path)
-    rescue Error::ENOENT
-      "# Error rendering the page. Contact the administrators if this issue persists."
+    rescue Errno::ENOENT
+      'Error rendering the page. Contact the administrators if this issue persists.'
     end
   end
 end
