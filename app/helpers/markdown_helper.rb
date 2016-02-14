@@ -1,4 +1,13 @@
 module MarkdownHelper
+  RAW_MARKDOWN_OPTS = {
+    tables: true,
+    fenced_code_blocks: true,
+    autolink: true,
+    disable_indented_code_blocks: true,
+    strikethrough: true,
+    superscript: false
+  }
+
   def raw_markdown_from_file(path, relative_to = Rails.root)
     raw_md from_file(path, relative_to)
   end
