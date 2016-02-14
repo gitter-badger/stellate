@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'about' => 'static#about'
   get 'terms' => 'static#terms'
   get 'conduct' => 'static#coc'
+  get 'datacollection' => 'static#datacollection'
+  get 'privacy' => 'static#privacy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
