@@ -1,20 +1,3 @@
-#### _TL;DR:_
-
-1. You're responsible for what you post. Be aware that what you post might be public.
-
-2. Information runs under our [Privacy Policy][1].
-
-3. Please abide by our [Code of Conduct][2]. Use common sense.
-
-4. We're not liable for anything that happens on your end.
-
-5. If you don't play by these rules, we have the right to remove your content and user account.
-
-6. We'll do maintenance sometimes. It usually isn't that bad.
-
-7. If you post copyright-protected content, we'll remove it if someone files a copyright infringement.
-
-
 # Terms of Use
 These Terms of Service ("Terms") as declared by the company (referred to as "Staff") govern your access to and use of the services (the "Services" or “Stellate”), and any  information, text, graphics, photos or other materials uploaded, downloaded or appearing on the Services (collectively referred to as "Content"). Your access to and use of the Services are conditioned on your acceptance of and compliance with these Terms. By accessing or using the Services you agree to be bound by these Terms.
 
@@ -44,6 +27,22 @@ Stellate requires occasional maintenances to improve, resolve, or update our ser
 Stellate respects the intellectual property rights of others and expects users of the Services to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your Content has been copied in a way that constitutes copyright infringement, please provide us with the following information: a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; identification of the copyrighted work claimed to have been infringed; identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be  removed or access to which is to be turned off, and information reasonably sufficient to permit us to locate the material; your contact information, including your address, telephone number, and an email address; a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
 We reserve the right to remove Content alleged to be infringing without prior notice, at our sole discretion, and without liability to  you. In appropriate circumstances, Stellate will also terminate a user’s account if the user is determined to be a repeat infringer.
+
+#### _TL;DR:_
+
+1. You're responsible for what you post. Be aware that what you post might be public.
+
+2. Information runs under our [Privacy Policy][1].
+
+3. Please abide by our [Code of Conduct][2]. Use common sense.
+
+4. We're not liable for anything that happens on your end.
+
+5. If you don't play by these rules, we have the right to remove your content and user account.
+
+6. We'll do maintenance sometimes. It usually isn't that bad.
+
+7. If you post copyright-protected content, we'll remove it if someone files a copyright infringement.
 
 [1]: http://stellate.cc/privacy
 [2]: http://stellate.cc/conduct
