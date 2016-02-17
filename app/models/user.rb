@@ -47,21 +47,31 @@ class User < ActiveRecord::Base
     end
   end
 
+  # creates a follow relation between two users
+  # @param target_user [Object] User object to follow
   def create_relationship(target_user)
     return if target_user.blocked? self
     active_relationships.create(target: target_user, type: "follow")
   end
   alias follow create_relationship
 
+  # destroys a follow relation between two users
+  # @param target_user [Object] User object to unfollow
   def destroy_relationship(target_user)
     active_relationships.find_by(target: target_user, type: "follow").destroy
   end
   alias unfollow destroy_relationship
 
+  # checks if a user is following the target
+  # @param target_user [Object] User object to check
+  # @return [Boolean] status of following
   def following?(target_user)
     active_relationships.where(source: self, target: target_user, type: "follow").exists?
   end
 
+  # creates a block relation between two users
+  # if follow relations exists, these are destroyed
+  # @param target_user [Object] User object to block
   def block_relationship(target_user)
     if self.following? target_user
       self.unfollow target_user
@@ -75,11 +85,16 @@ class User < ActiveRecord::Base
   end
   alias block block_relationship
 
+  # destroys a block relation between two users
+  # @param target_user [Object] User object to unblock
   def unblock_relationship(target_user)
     blocked_relationships.find_by(target: target_user, type: "block").destroy
   end
   alias unblock unblock_relationship
 
+  # checks if a user has blocked the target
+  # @param target_user [Object] User object to check
+  # @return [Boolean] status of following
   def blocked?(target_user)
     blocked_relationships.where(source: self, target: target_user, type: "block").exists?
   end
