@@ -42,4 +42,9 @@ RSpec.describe Relationship, type: :model do
     @user2.follow @user
     expect(@user2.following?(@user)).to be true
   end
+
+  it "should return true if the user is blocked" do
+    @user.block @user2
+    expect(@user.blocked?(@user2)).to be true
+  end
 end
