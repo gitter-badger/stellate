@@ -1,7 +1,6 @@
 .container.page-margin
-  -# TEMPORARY, PLS FIX (TODO)
   .jumbotron
     %h1 Stellate
     %p= t('views.index.description')
     %p
-      %a.btn.btn-primary.btn-lg{href: '/register', role: 'button'}= t('voc.sign_up')
+      %a.btn.btn-primary.btn-lg{href: new_user_registration_path, role: 'button'}= t('voc.sign_up')
