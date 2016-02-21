@@ -10,18 +10,24 @@ class User < ActiveRecord::Base
 
   has_one :profile, dependent: :destroy
 
-  has_many :active_relationships, class_name: 'Relationship',
-                                  foreign_key: 'source_id',
-                                  dependent: :destroy
-  has_many :passive_relationships, class_name: 'Relationship',
+  has_many :active_relationships,  -> { where relationships: { type: "follow" } },
+                                   class_name: 'Relationship',
+                                   foreign_key: 'source_id',
+                                   dependent: :destroy
+  has_many :passive_relationships, -> { where relationships: { type: "follow" } },
+                                   class_name: 'Relationship',
                                    foreign_key: 'target_id',
                                    dependent: :destroy
-  has_many :blocked_relationships, class_name: 'Relationship',
-                                  foreign_key: 'source_id',
-                                  dependent: :destroy
-  has_many :friends,   through: :active_relationships, source: :target
-  has_many :followers, through: :passive_relationships, source: :source
-  has_many :blocks,    through: :blocked_relationships, source: :target
+  has_many :blocked_relationships, -> { where relationships: { type: "block" } },
+                                   class_name: 'Relationship',
+                                   foreign_key: 'source_id',
+                                   dependent: :destroy
+  has_many :friends,    through: :active_relationships, 
+                        source: :target
+  has_many :followers,  through: :passive_relationships, 
+                        source: :source
+  has_many :blocks,     through: :blocked_relationships, 
+                        source: :target
 
   validates :screen_name, presence: true,
                           uniqueness: { case_sensitive: false }
@@ -51,14 +57,14 @@ class User < ActiveRecord::Base
   # @param target_user [Object] User object to follow
   def create_relationship(target_user)
     return if target_user.blocked? self
-    active_relationships.create(target: target_user, type: "follow")
+    active_relationships.create(target: target_user)
   end
   alias follow create_relationship
 
   # destroys a follow relation between two users
   # @param target_user [Object] User object to unfollow
   def destroy_relationship(target_user)
-    active_relationships.find_by(target: target_user, type: "follow").destroy
+    active_relationships.find_by(target: target_user).destroy
   end
   alias unfollow destroy_relationship
 
@@ -66,7 +72,7 @@ class User < ActiveRecord::Base
   # @param target_user [Object] User object to check
   # @return [Boolean] status of following
   def following?(target_user)
-    active_relationships.where(source: self, target: target_user, type: "follow").exists?
+    friends.include? target_user
   end
 
   # creates a block relation between two users
@@ -81,14 +87,14 @@ class User < ActiveRecord::Base
       target_user.unfollow self
     end
 
-    blocked_relationships.create(target: target_user, type: "block")
+    blocked_relationships.create(target: target_user)
   end
   alias block block_relationship
 
   # destroys a block relation between two users
   # @param target_user [Object] User object to unblock
   def unblock_relationship(target_user)
-    blocked_relationships.find_by(target: target_user, type: "block").destroy
+    blocked_relationships.find_by(target: target_user).destroy
   end
   alias unblock unblock_relationship
 
@@ -96,6 +102,6 @@ class User < ActiveRecord::Base
   # @param target_user [Object] User object to check
   # @return [Boolean] status of following
   def blocked?(target_user)
-    blocked_relationships.where(source: self, target: target_user, type: "block").exists?
+    blocks.include? target_user
   end
 end
