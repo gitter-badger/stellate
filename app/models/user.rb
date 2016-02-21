@@ -100,7 +100,7 @@ class User < ActiveRecord::Base
 
   # checks if a user has blocked the target
   # @param target_user [Object] User object to check
-  # @return [Boolean] status of following
+  # @return [Boolean] status of blocking
   def blocked?(target_user)
     blocks.include? target_user
   end
