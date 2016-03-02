@@ -104,4 +104,11 @@ class User < ActiveRecord::Base
   def blocked?(target_user)
     blocks.include? target_user
   end
+
+  # checks if a relationship between two users is mutual
+  # @param target_user [Object] User object to check
+  # @return [Boolean] mutual status
+  def mutual?(target_user)
+    return target_user.following?(self) && self.following?(target_user)
+  end
 end
