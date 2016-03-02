@@ -1,5 +1,0 @@
-ruby:
-  config_file: config/style/rubocop.yml
-
-haml:
-  config_file: config/style/haml-lint.yml
