@@ -47,4 +47,10 @@ RSpec.describe Relationship, type: :model do
     @user.block @user2
     expect(@user.blocked?(@user2)).to be true
   end
+
+  it "should return true if the relationship is mutual" do
+    @user.follow @user2
+    @user2.follow @user
+    expect(@user.mutual?(@user2)).to be true
+  end
 end
