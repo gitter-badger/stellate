@@ -70,6 +70,10 @@ gem 'devise-i18n', '~> 0.12.1'
 ######################################
 gem 'rolify', '~> 5.0'
 
+# User Badges & Points
+######################################
+gem 'merit'
+
 group :production do
   gem 'unicorn'
 end
