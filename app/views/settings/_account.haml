@@ -1,0 +1,15 @@
+.panel.panel-default
+  .panel-body
+    = bootstrap_form_for(resource, as: resource_name, url: edit_user_registration_path, html: { method: :put }) do |f|
+      = render 'modal/password', f: f
+      = devise_error_messages!
+
+      .field
+        = f.text_field :screen_name, autofocus: true, label: t('voc.screen_name')
+        = f.email_field :email, autofocus: true, label: t('voc.email')
+
+      .field
+        = f.password_field :password, autocomplete: "off", label: t('voc.password'), help: t('views.settings.account.password_help')
+
+      %button.btn.btn-primary{"data-target" => "#modal-pw", "data-toggle" => "modal", :type => "button"}= t 'voc.save'
+    = button_to t('views.settings.account.deactivate'), edit_user_registration_path, data: { confirm: t('voc.sure') }, method: :delete, class: "btn btn-link"
