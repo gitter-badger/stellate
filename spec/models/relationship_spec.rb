@@ -36,6 +36,12 @@ RSpec.describe Relationship, type: :model do
     expect(@user2.following?(@user)).to be false
   end
 
+  it "should not create a relationship if the target is blocked" do
+    @user.block @user2
+    @user.follow @user2
+    expect(@user.following?(@user2)).to be false
+  end
+
   it "should be able to create relationships if the user is unblocked" do
     @user.block @user2
     @user.unblock @user2

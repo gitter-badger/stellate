@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
   # creates a follow relation between two users
   # @param target_user [Object] User object to follow
   def create_relationship(target_user)
-    return if target_user.blocked? self
+    return if target_user.blocked?(self) || self.blocked?(target_user)
     active_relationships.create(target: target_user)
   end
   alias follow create_relationship
