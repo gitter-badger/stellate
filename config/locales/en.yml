@@ -33,8 +33,17 @@ en:
       description: "A microblogging site that doesn't completely suck."
     header:
       admin: "Admin Panel"
+    tabs:
+      settings:
+        account: "Account Settings"
+    settings:
+      account:
+        deactivate: "Deactivate Account"
+        password_help: "Leave this empty if you won't change it!"
+        current_help: "We need your current password to confirm your changes!"
   voc:
     confirm_password: "Confirm password"
+    current_password: "Current password"
     email: "E-Mail address"
     password: "Password"
     remember_me: "Remember me"
@@ -42,5 +51,9 @@ en:
     sign_in: "Login"
     sign_out: "Logout"
     sign_up: "Register"
+    save: "Save"
+    sure: "Are you sure?"
+    cancel: "Cancel"
+    close: "Close"
   alerts:
     noscript: "Please enable Javascript!"
