@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   get 'faq' => 'static#faq'
   get 'about' => 'static#about'
 
+  get 'terms' => 'static#terms'
+  get 'conduct' => 'static#coc'
+  get 'datacollection' => 'static#datacollection'
+  get 'privacy' => 'static#privacy'
+
   devise_for :users, path: 'user', skip: [:sessions, :registrations]
   as :user do
     # :sessions

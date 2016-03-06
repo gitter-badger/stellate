@@ -12,4 +12,16 @@ class StaticController < ApplicationController
 
   def about
   end
+
+  def terms
+  end
+
+  def coc
+  end
+
+  def datacollection
+  end
+
+  def privacy
+  end
 end

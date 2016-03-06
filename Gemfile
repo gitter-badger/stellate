@@ -74,10 +74,14 @@ gem 'rolify', '~> 5.0'
 ######################################
 gem 'merit'
 
+# Gems only needed for production
+######################################
 group :production do
   gem 'unicorn'
 end
 
+# Gems only needed for development
+######################################
 group :development, :test do
   gem 'byebug'
   gem 'nokogiri'
@@ -87,6 +91,8 @@ group :development, :test do
   gem 'thin'
 end
 
+# Gems only needed while testing
+######################################
 group :test do
   gem 'codecov', require: false
 end
