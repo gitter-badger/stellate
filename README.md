@@ -1,4 +1,4 @@
-# stellate 
+<img width=500 src='http://i.imgur.com/WcgueAG.png'>
 
 [![Build Status](https://travis-ci.org/pixeldesu/stellate.svg?branch=master)](https://travis-ci.org/stellate/stellate) [![codecov.io](https://codecov.io/github/pixeldesu/stellate/coverage.svg?branch=master)](https://codecov.io/github/pixeldesu/stellate?branch=master) [![Code Climate](https://codeclimate.com/github/pixeldesu/stellate/badges/gpa.svg)](https://codeclimate.com/github/pixeldesu/stellate)
 
