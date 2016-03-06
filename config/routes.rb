@@ -26,4 +26,6 @@ Rails.application.routes.draw do
     put '/settings/account' => 'devise/registrations#update'
     delete '/settings/account' => 'devise/registrations#destroy'
   end
+
+  mount API => '/api'
 end
