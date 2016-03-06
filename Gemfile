@@ -82,7 +82,7 @@ end
 
 # Gems only needed for development
 ######################################
-group :development do
+group :development, :test do
   gem 'byebug'
   gem 'nokogiri'
   gem 'rspec-rails', '~> 3.0'
@@ -95,9 +95,6 @@ end
 ######################################
 group :test do
   gem 'codecov', require: false
-  gem 'factory_girl_rails', require: false
-  gem 'faker'
-  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
