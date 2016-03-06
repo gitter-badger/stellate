@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Routes for static pages:

@@ -9,6 +9,10 @@ gem 'rails', '4.2.5.1'
 gem 'grape'
 gem 'grape-entity'
 
+# OAuth
+######################################
+gem 'doorkeeper'
+
 # Databases
 ######################################
 gem 'pg'
