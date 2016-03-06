@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 ######################################
 gem 'rails', '4.2.5.1'
 
+# API
+######################################
+gem 'grape'
+gem 'grape-entity'
+gem 'doorkeeper'
+
 # Databases
 ######################################
 gem 'pg'

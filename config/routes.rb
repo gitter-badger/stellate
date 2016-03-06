@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Routes for static pages:
@@ -26,4 +27,6 @@ Rails.application.routes.draw do
     put '/settings/account' => 'devise/registrations#update'
     delete '/settings/account' => 'devise/registrations#destroy'
   end
+
+  mount API => '/api'
 end
