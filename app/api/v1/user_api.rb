@@ -3,7 +3,8 @@ module V1
 
     namespace :user do
       get ':id' do
-        User.find(params[:id])
+        user = User.find(params[:id])
+        present user, with: V1::Entities::UserEntity
       end
     end
 
