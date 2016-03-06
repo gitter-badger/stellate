@@ -9,7 +9,10 @@
     = javascript_include_tag    'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render "header/default"
+    - if @frontpage
+      = render "header/frontpage"
+    - else
+      = render "header/default"
     = render "alerts/noscript"
     = render "alerts/flash"
     = yield
