@@ -70,15 +70,12 @@ gem 'devise-i18n', '~> 0.12.1'
 ######################################
 gem 'rolify', '~> 5.0'
 
-<<<<<<< HEAD
-# Gems only needed for production
-######################################
-=======
 # User Badges & Points
 ######################################
 gem 'merit'
 
->>>>>>> master
+# Gems only needed for production
+######################################
 group :production do
   gem 'unicorn'
 end
