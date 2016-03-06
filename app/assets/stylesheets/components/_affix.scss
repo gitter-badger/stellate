@@ -1,0 +1,33 @@
+.navbar-default {
+  &.affix-top {
+    background-color: transparent;
+    border: 0;
+
+    .navbar-brand,
+    .navbar-nav > li > a {
+      color: #ffffff;
+    }
+    
+    .navbar-nav > li > a:focus {
+      color: darken(#ffffff, 20%);
+    }
+
+    .navbar-nav > .open > a,
+    .navbar-nav > .open > a:focus {
+      background-color: transparent;
+    }
+
+    .navbar-nav > li.active {
+      background-color: transparent;
+    }
+    @media (min-width: $screen-sm-max) {
+      .dropdown-menu {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &.affix {
+    transition: 0.2s ease-in;
+  }
+}
