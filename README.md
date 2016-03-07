@@ -21,6 +21,20 @@
   </a>
 </p>
 
+# What is Stellate?
+
+Stellate is a Twitter clone, at its simplest form. But, as you can see, it's
+also open source! That means that everyone can contribute and we benefit from
+high quality tooling that integrates directly with GitHub.
+
+While developing Stellate, we strive for three things:
+1. Complete test coverage
+2. High code quality
+3. Good documentation
+
+For that, we have Codecov and CodeClimate set up (with good results, as you can
+see).
+
 # License
 
 Stellate is licensed under the [GNU Affero General Public License Version 3.0](https://github.com/stellate/stellate/blob/master/LICENSE)
