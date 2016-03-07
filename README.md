@@ -7,7 +7,7 @@
 </p>
 
 <p align='center'>
-  <a href='https://travis-ci.org/stellate/stellate'>
+  <a href='https://travis-ci.org/pixeldesu/stellate'>
     <img src='https://travis-ci.org/pixeldesu/stellate.svg?branch=master'
          alt='build status'>
   </a>
