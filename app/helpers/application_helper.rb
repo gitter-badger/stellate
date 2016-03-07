@@ -11,7 +11,7 @@ module ApplicationHelper
       body = "#{content_tag(:i, '', class: "mdi-#{options[:icon]}")} #{body}"
     end
     unless options[:badge].nil?
-      body << content_badge
+      body << content_badge(options)
     end
 
     content_tag(:li, link_to(body.html_safe, path), class: ("#{'active ' if current_page? path}#{options[:class]}"))
@@ -25,7 +25,7 @@ module ApplicationHelper
     }.merge(options)
 
     unless options[:badge].nil? or options[:badge] == 0
-      body << content_badge
+      body << content_badge(options)
     end
 
     content_tag(:a, body.html_safe, href: path, class: ("list-group-item #{'active ' if current_page? path}#{options[:class]}"))
@@ -44,7 +44,7 @@ module ApplicationHelper
 
   private
 
-  def content_badge
+  def content_badge(options)
     " #{
       content_tag(:span, options[:badge], class: ("badge#{
         " badge-#{options[:badge_color]}" unless options[:badge_color].nil?
