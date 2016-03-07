@@ -28,6 +28,7 @@ also open source! That means that everyone can contribute and we benefit from
 high quality tooling that integrates directly with GitHub.
 
 While developing Stellate, we strive for three things:
+
 1. Complete test coverage
 2. High code quality
 3. Good documentation
