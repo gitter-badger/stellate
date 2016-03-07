@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   rolify
   acts_as_paranoid
+  searchkick
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -24,11 +25,11 @@ class User < ActiveRecord::Base
                                    class_name: 'Relationship',
                                    foreign_key: 'source_id',
                                    dependent: :destroy
-  has_many :friends,    through: :active_relationships, 
+  has_many :friends,    through: :active_relationships,
                         source: :target
-  has_many :followers,  through: :passive_relationships, 
+  has_many :followers,  through: :passive_relationships,
                         source: :source
-  has_many :blocks,     through: :blocked_relationships, 
+  has_many :blocks,     through: :blocked_relationships,
                         source: :target
 
   validates :screen_name, presence: true,

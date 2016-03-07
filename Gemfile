@@ -80,6 +80,10 @@ gem 'rolify', '~> 5.0'
 ######################################
 gem 'merit'
 
+# Search
+######################################
+gem 'searchkick'
+
 # Gems only needed for production
 ######################################
 group :production do
