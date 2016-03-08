@@ -11,9 +11,9 @@ class ProfileController < ApplicationController
                                                          :website)
 
     if current_user.profile.update_attributes(profile_attributes)
-      flash[:success] = "Your profile has been updated!"
+      flash[:success] = t('flashes.profile.success')
     else
-      flash[:error] = "An error occured while saving your profile!"
+      flash[:error] = t('flashes.profile.error')
     end
     redirect_to edit_profile_path
   end

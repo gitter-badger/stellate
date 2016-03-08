@@ -3,9 +3,9 @@
     = bootstrap_form_for(current_user.profile, url: {action: "edit"}, :html => { :multipart => true }, method: "patch") do |f|
 
       .field
-        = f.text_field :display_name, autofocus: true, label: "Display name"
-        = f.text_field :bio, autofocus: true, label: "Biography"
-        = f.text_field :location, autofocus: true, label: "Location"
-        = f.text_field :website, autofocus: true, label: "Website"
+        = f.text_field :display_name, autofocus: true, label: t('voc.display_name')
+        = f.text_field :bio, autofocus: true, label: t('voc.bio')
+        = f.text_field :location, autofocus: true, label: t('voc.location')
+        = f.text_field :website, autofocus: true, label: t('voc.website')
       
-      %button.btn.btn-primary{:type => "submit"}= t 'voc.save'
+      %button.btn.btn-primary{:type => "submit"}= t('voc.save')

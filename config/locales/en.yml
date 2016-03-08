@@ -36,6 +36,7 @@ en:
     tabs:
       settings:
         account: "Account Settings"
+        profile: "Profile Settings"
     settings:
       account:
         deactivate: "Deactivate Account"
@@ -48,6 +49,10 @@ en:
     password: "Password"
     remember_me: "Remember me"
     screen_name: "Screen name"
+    display_name: "Display name"
+    bio: "Biography"
+    location: "Location"
+    website: "Website"
     sign_in: "Login"
     sign_out: "Logout"
     sign_up: "Register"
@@ -57,3 +62,7 @@ en:
     close: "Close"
   alerts:
     noscript: "Please enable Javascript!"
+  flashes:
+    profile:
+      success: "Your profile has been updated!"
+      error: "An error occured while saving your profile!"
