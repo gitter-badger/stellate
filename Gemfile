@@ -10,6 +10,10 @@ gem 'grape'
 gem 'grape-entity'
 gem 'doorkeeper'
 
+# Configuration
+######################################
+gem 'figaro'
+
 # Databases
 ######################################
 gem 'pg'

@@ -24,3 +24,6 @@
 
 # Ignore backup files
 *~
+
+# Ignore application configuration
+/config/application.yml
