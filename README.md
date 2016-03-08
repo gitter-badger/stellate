@@ -36,6 +36,12 @@ While developing Stellate, we strive for three things:
 For that, we have Codecov and CodeClimate set up (with good results, as you can
 see).
 
+# Setup
+
+As Stellate is currently completely bleeding-edge and still in preparation phase, 
+there isn't much to setup yet. However, if you wish to set it up locally to develop 
+and test it, look at the [Wiki](https://github.com/pixeldesu/stellate/wiki).
+
 # License
 
 Stellate is licensed under the [GNU Affero General Public License Version 3.0](https://github.com/stellate/stellate/blob/master/LICENSE)
