@@ -23,6 +23,8 @@
 
 # What is Stellate?
 
+[![Join the chat at https://gitter.im/pixeldesu/stellate](https://badges.gitter.im/pixeldesu/stellate.svg)](https://gitter.im/pixeldesu/stellate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Stellate is a Twitter clone, at its simplest form. But, as you can see, it's
 also open source! That means that everyone can contribute and we benefit from
 high quality tooling that integrates directly with GitHub.
