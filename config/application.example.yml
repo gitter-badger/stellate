@@ -1,0 +1,4 @@
+# stellate configuration
+
+# Redis server/client URL
+redis: "redis://localhost:6379"
