@@ -28,5 +28,8 @@ Rails.application.routes.draw do
     delete '/settings/account' => 'devise/registrations#destroy'
   end
 
+  match '/settings/profile', to: 'profile#edit', via: 'get', as: :edit_profile
+  match '/settings/profile', to: 'profile#update', via: 'patch', as: :update_profile
+
   mount API => '/api'
 end
